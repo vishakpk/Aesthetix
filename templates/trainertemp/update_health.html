@@ -1,0 +1,15 @@
+{% extends 'trainertemp/trainer_home.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="col-lg-8 mb-4">
+    <div class="card">
+        <div class="card-body">
+            <form method="post">
+                {% csrf_token %}
+                {{health_form|crispy}}
+                <button type="submit" class="btn btn-primary">submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

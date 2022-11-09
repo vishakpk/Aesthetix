@@ -1,0 +1,23 @@
+{% extends 'admintemp/admin_home.html' %}
+{% block content %}
+<style>
+  .card h-100{ height : 450px; overflow-x: auto;}
+</style>
+<div class='row card-group'>
+  {% for i in notif %}
+<div class="col-4">
+  <div class="card h-100">
+<div class="card" style="width: 25rem;">
+<!--   -->
+  <div class="card-body">
+    <h5 class="card-title">{{i.date}}</h5>
+    <p class="card-text">{{i.subject}}</p>
+    <p class="card-text">{{i.description}}</p>
+
+  </div>
+</div>
+</div>
+</div>
+  {% endfor %}
+</div>
+{% endblock %}
